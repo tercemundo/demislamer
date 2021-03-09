@@ -16,7 +16,6 @@ connection to the database: ";
 instock FROM products";
  $result = $mysqli->query($select_query);
  while ($obj = mysqli_fetch_object($result)) {// call to
-mysqli_fetch_object function
  echo "ID: ".$obj->id.", ".
  "Name: ".$obj->name.", ".
  "Supplier: ".$obj->supplier.", ".
