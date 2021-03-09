@@ -1,5 +1,4 @@
 <?php
-$ip=getenv('MARIADB_SERVICE_HOST');
  $mysqli = new mysqli( mariadb , 'root', 'master', 'sampledb');
  // If an error occurs when establishing the connection
  if ($mysqli->connect_errno) {
