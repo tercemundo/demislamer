@@ -1,0 +1,1 @@
+oc create configmap config --from-literal=mensaje="hola mundo desde un configmap"
