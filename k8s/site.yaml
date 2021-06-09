@@ -3,21 +3,21 @@ items:
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
-    name: site
+    name: website
   spec:
     replicas: 1
     selector:
       matchLabels:
-        deployment: site
+        deployment: website
     strategy: {}
     template:
       metadata:
         labels:
-          deployment: site
+          deployment: website
       spec:
         containers:
         - image: ' '
-          name: site
+          name: website
           ports:
           - containerPort: 8080
             protocol: TCP
@@ -29,10 +29,10 @@ items:
   kind: Service
   metadata:
     labels:
-      app: site
-      app.kubernetes.io/component: site
-      app.kubernetes.io/instance: site
-    name: site
+      app: website
+      app.kubernetes.io/component: website
+      app.kubernetes.io/instance: website
+    name: website
   spec:
     ports:
     - name: 8080-tcp
@@ -44,7 +44,7 @@ items:
       protocol: TCP
       targetPort: 8443
     selector:
-      deployment: site
+      deployment: website
   status:
     loadBalancer: {}
 kind: List
