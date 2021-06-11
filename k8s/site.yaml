@@ -3,21 +3,21 @@ items:
 - apiVersion: apps/v1
   kind: Deployment
   metadata:
-    name: website
+    name: debian
   spec:
     replicas: 1
     selector:
       matchLabels:
-        deployment: website
+        deployment: debian
     strategy: {}
     template:
       metadata:
         labels:
-          deployment: website
+          deployment: debian
       spec:
         containers:
         - image: ' '
-          name: website
+          name: debian
           ports:
           - containerPort: 8080
             protocol: TCP
@@ -29,10 +29,10 @@ items:
   kind: Service
   metadata:
     labels:
-      app: website
-      app.kubernetes.io/component: website
-      app.kubernetes.io/instance: website
-    name: website
+      app: debian
+      app.kubernetes.io/component: debian
+      app.kubernetes.io/instance: debian
+    name: debian
   spec:
     ports:
     - name: 8080-tcp
@@ -44,7 +44,7 @@ items:
       protocol: TCP
       targetPort: 8443
     selector:
-      deployment: website
+      deployment: debian
   status:
     loadBalancer: {}
 kind: List
