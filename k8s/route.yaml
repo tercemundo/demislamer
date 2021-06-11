@@ -1,0 +1,15 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: debian
+  namespace: debian
+spec:
+  host: debian-debian.apps-crc.testing
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: debian
+    weight: 100
+  wildcardPolicy: None
+status: {}
