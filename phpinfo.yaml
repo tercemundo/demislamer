@@ -2,14 +2,8 @@ apiVersion: template.openshift.io/v1
 kind: Template
 labels:
   template: phpinfo
-message: |-
-  The following service(s) have been created in your project: ${NAME}.
-
+message: 'The following service(s) have been created in your project: ${NAME}.'
 metadata:
-  annotations:
-    tags: quickstart,nginx
-  labels:
-    samples.operator.openshift.io/managed: "true"
   name: phpinfo
 objects:
 - apiVersion: v1
