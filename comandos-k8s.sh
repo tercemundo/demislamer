@@ -1,3 +1,3 @@
-kubectl create deployment demis --image=mguazzardo/miphp:latest
+kubectl create deployment demis --image=mguazzardo/miphp:v2
 kubectl expose deployment demis --port=80 --type=NodePort
 

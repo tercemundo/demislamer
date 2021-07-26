@@ -1,0 +1,14 @@
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Handling connection for 3306
+Handling connection for 3306
+E0726 23:03:14.297471    8067 portforward.go:400] an error occurred forwarding 3306 -> 3306: error forwarding port 3306 to pod f37a54eacb08a661ec049007ff4f6a060ec31f683e2344ffb75b958557be4eac, uid : Error: No such container: f37a54eacb08a661ec049007ff4f6a060ec31f683e2344ffb75b958557be4eac
+Unable to listen on port 3306: Listeners failed to create with the following errors: [unable to create listener: Error listen tcp4 127.0.0.1:3306: bind: address already in use unable to create listener: Error listen tcp6 [::1]:3306: bind: address already in use]
+error: unable to listen on any of the requested ports: [{3306 3306}]
+Handling connection for 3306
+E0726 23:04:20.398508    8067 portforward.go:400] an error occurred forwarding 3306 -> 3306: error forwarding port 3306 to pod f37a54eacb08a661ec049007ff4f6a060ec31f683e2344ffb75b958557be4eac, uid : Error: No such container: f37a54eacb08a661ec049007ff4f6a060ec31f683e2344ffb75b958557be4eac
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Forwarding from 127.0.0.1:3306 -> 3306
+Forwarding from [::1]:3306 -> 3306
+Handling connection for 3306

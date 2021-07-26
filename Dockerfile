@@ -7,3 +7,4 @@ WORKDIR /var/www/html
 #Desde nuestro punto de directorio hacia nuestro workdir
 COPY . . 
 
+RUN apt -y update && apt -y install mariadb-client-core-10.3
