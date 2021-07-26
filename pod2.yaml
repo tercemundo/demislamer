@@ -1,0 +1,16 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    name: demis-cm
+    namespace: demis
+  spec:
+    containers:
+    - image: mguazzardo/miphp:latest
+      imagePullPolicy: Always
+      name: miphp
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
