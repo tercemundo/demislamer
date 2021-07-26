@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    app: demis
+  name: demis
+  namespace: demis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demis
+  template:
+    metadata:
+      labels:
+        app: demis
+    spec:
+      containers:
+      - image: mguazzardo/miphp:latest
+        name: miphp
+        env:
+        - name: MENSAJE1
+          valueFrom:
+            configMapKeyRef:
+              name: var1
+              key: Saludo
