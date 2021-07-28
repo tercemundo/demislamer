@@ -1,0 +1,1 @@
+https://github.com/codefresh-io/example-voting-app
