@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demis-svc
+  labels:
+    app: demis
+spec:
+  selector:
+    app: demis
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
