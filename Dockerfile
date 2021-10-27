@@ -1,4 +1,4 @@
-FROM eboraas/apache-php 
+FROM eboraas/apache-php
 
 #Definimos la carpeta /var/www/html
 WORKDIR /var/www/html
