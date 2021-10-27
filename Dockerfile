@@ -1,4 +1,4 @@
-FROM FROM image-registry.openshift-image-registry.svc:5000/openshift/php:latest as builder
+FROM image-registry.openshift-image-registry.svc:5000/openshift/php:latest as builder
 
 #Definimos la carpeta /var/www/html
 WORKDIR /tmp
