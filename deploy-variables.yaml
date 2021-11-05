@@ -1,0 +1,17 @@
+kind: "DeploymentConfig"
+apiVersion: "v1"
+metadata:
+  name: "frontend2"
+spec:
+  replicas: 1   #Muy importante esto sino no funciona, no levanta las replicas....
+  template: 
+    metadata:
+      labels:
+        name: "frontend2"
+    spec:
+      containers:
+        - name: "helloworld"
+          image: "mguazzardo/miphp:latest"
+          env:
+          - name: MENSAJE1
+            value: "hola PHP"
