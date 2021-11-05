@@ -1,17 +1,22 @@
-kind: "DeploymentConfig"
-apiVersion: "v1"
+apiVersion: v1
+kind: DeploymentConfig
 metadata:
-  name: "frontend2"
+  name: busybox
 spec:
-  replicas: 1   #Muy importante esto sino no funciona, no levanta las replicas....
-  template: 
+  replicas: 1 #Super importante esto, meterlo sino no crea pods!
+  strategy:
+    type: Recreate
+  template:
     metadata:
       labels:
-        name: "frontend2"
+        deploymentconfig: busybox
     spec:
       containers:
-        - name: "helloworld"
-          image: "mguazzardo/miphp:latest"
-          env:
-          - name: MENSAJE1
-            value: "hola PHP"
+      - image: busybox
+        name: busybox
+        command: [ "/bin/sh", "-c", 'while true ; do echo "$MENSAJE1"; sleep 1; done;' ]
+        env:
+        - name: MENSAJE1
+          value: "hola PHP"
+  triggers:
+  - type: ConfigChange
